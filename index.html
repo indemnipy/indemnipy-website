@@ -122,6 +122,26 @@
   .sub-rule span { white-space: nowrap; }
   .sub-rule .sep { color: var(--paper-line); }
 
+  /* ──────── MASTHEAD + SUB-RULE: MOBILE ──────── */
+  @media (max-width: 720px) {
+    .masthead {
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      font-size: 10px;
+    }
+    .masthead .m-mid { display: none; }
+    .masthead .m-right { gap: 10px; }
+
+    .sub-rule {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 14px 0;
+      text-align: center;
+    }
+    .sub-rule .sep { display: none; }
+    .sub-rule span { white-space: normal; }
+  }
+
   /* ──────── HERO ──────── */
   .hero {
     display: grid;
@@ -503,6 +523,7 @@
 
   @media (max-width: 720px) {
     footer { grid-template-columns: 1fr; text-align: center; }
+    footer .seal { margin: 0 auto; }
     footer .links { justify-content: center; }
   }
 
@@ -549,7 +570,7 @@
     <div class="eyebrow reveal d2">Coming Soon · Anno MMXXVI</div>
     <h1 class="title reveal d3">indemni<span class="py">py</span></h1>
     <p class="lede reveal d4">
-      A cooperative of open source developers writing <em>Python packages</em> for the insurance industry &mdash; from actuarial modelling to claims, underwriting, and reinsurance.
+      A quiet cooperative of open source developers writing <em>Python packages</em> for the insurance industry &mdash; from actuarial modelling to claims, underwriting, and reinsurance.
     </p>
     <div class="margin-note reveal d5">Est. MMXXVI &nbsp;—&nbsp; Under Construction</div>
   </section>
