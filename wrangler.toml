@@ -1,0 +1,10 @@
+name = "indemnipy"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
+
+# D1 binding — replace `database_id` with the id printed by
+# `wrangler d1 create indemnipy`
+[[d1_databases]]
+binding       = "DB"
+database_name = "indemnipy"
+database_id   = "763d21a7-5d77-4ea2-80dd-a818e40809a9"

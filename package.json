@@ -1,0 +1,19 @@
+{
+  "name": "indemnipy-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Coming-soon page for indemnipy",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy .",
+    "db:create": "wrangler d1 create indemnipy",
+    "db:migrate:local": "wrangler d1 migrations apply indemnipy --local",
+    "db:migrate": "wrangler d1 migrations apply indemnipy --remote",
+    "db:list:local": "wrangler d1 execute indemnipy --local --command \"SELECT email, created_at FROM subscribers ORDER BY created_at DESC;\"",
+    "db:list": "wrangler d1 execute indemnipy --remote --command \"SELECT email, created_at FROM subscribers ORDER BY created_at DESC;\"",
+    "db:count": "wrangler d1 execute indemnipy --remote --command \"SELECT COUNT(*) AS total FROM subscribers;\""
+  },
+  "devDependencies": {
+    "wrangler": "^4.84.0"
+  }
+}
